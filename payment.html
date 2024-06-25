@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>www.amazon.com</title>
+<script language="javascript">
+function val()
+{
+var num=pay.cost.value;
+var num_id=parseInt(num);
+if(pay.bookno.value=="0")
+{
+alert("please select the book no. \n");
+return false;
+}
+if(pay.cost.value=="")
+{
+alert("please enter the amount in figures \n");
+return false;
+}
+if(isNaN(num_id))
+{
+alert("enter only numeric data \n");
+return false;
+}
+}
+</script>
+</head>
+<br><br><br>
+<body bgcolor="#FDD017" align="center">
+<hr><br><br><br>
+<form name="pay" action="card.html" onSubmit="return val()">
+Enter Book No. :<select name="bookno">
+	<option value="0"> - Choose Book No - </option>
+	<option value="P100C21">P100C21</option>
+	<option value="P100C22">P100C22</option>
+	<option value="P100C23">P100C23</option>
+	<option value="P100C24">P100C24</option>
+	<option value="P100C25">P100C25</option>
+	<option value="P100C26">P100C26</option>
+	<option value="P100C27">P100C27</option>
+	<option value="E200C31">E200C31</option>
+	<option value="E200C32">E200C32</option>
+	<option value="E200C33">E200C33</option>
+	<option value="E200C34">E200C34</option>
+	<option value="E200C35">E200C35</option>
+	<option value="A300C41">A300C41</option>
+	<option value="A300C42">A300C42</option>
+	<option value="A300C43">A300C43</option>
+	<option value="A300C44">A300C44</option>
+	<option value="A300C45">A300C45</option>
+	<option value="M400C51">M400C51</option>
+	<option value="M400C52">M400C52</option>
+	<option value="M400C53">M400C53</option>
+	<option value="M400C54">M400C54</option>
+	<option value="M400C55">M400C55</option>
+	<option value="M400C56">M400C56</option>
+</select><br><br><br>
+Enter Amount in figures :<input type="text" name="cost"><br><br><br>
+<input type="submit" name="submit" value="Order Now">&nbsp;&nbsp;
+<input type="reset" value="cancel"><br><br><br><hr>
+</form>
+</body>
+</html>

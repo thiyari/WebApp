@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>www.amazon.com</TITLE>
+<SCRIPT LANGUAGE="JAVASCRIPT">
+function val()
+{
+if(form1.pass.value=="")
+{
+alert("password can't be null \n");
+return false;
+}
+if(form1.pass.value.length<6)
+{
+alert("password contains atleast 6 digits \n");
+return false;
+}
+if(form1.pass1.value=="")
+{
+alert("new password can't be null \n");
+return false;
+}
+if(form1.pass1.value.length<6)
+{
+alert("password contains atleast 6 digits \n");
+return false;
+}
+if(form1.pass.value==form1.pass1.value)
+{
+alert("old password and new password must not be same \n");
+return false;
+}
+if(form1.pass1.value!=form1.pass2.value)
+{
+alert("passwords does not match \n");
+return false;
+}
+}
+</SCRIPT>
+<BODY ALIGN="CENTER" BGCOLOR="#FDD017">
+<br><br><br>
+<hr>
+<FORM NAME="form1" METHOD="POST" onSubmit="return val()" ACTION="confirm.html" >
+<BR><BR><BR>
+OLD PASSWORD:<input type="password" name="pass" size="20"><br><br><br>
+NEW PASSWORD:<input type="password" name="pass1" size="20"><br><br><br>
+CONFIRM PASSWORD:<input type="password" name="pass2" size="20"><br><br><br>
+<input type="submit" value="submit">&nbsp;&nbsp;<input type="reset" value="cancel">
+</FORM><br>
+<hr>
+</BODY>
+</HTML>

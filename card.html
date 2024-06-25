@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<TITLE>www.amazon.com</TITLE>
+<SCRIPT LANGUAGE="JAVASCRIPT">
+function val()
+{
+var num1=pay.card_no.value;
+var Inum1=parseInt(num1);
+var num2=pay.sec_no.value;
+var Inum2=parseInt(num2);
+if(pay.card_no.value=="")
+{
+alert("please enter the card no. \n");
+return false;
+}
+if(isNaN(Inum1))
+{
+alert("please enter only numeral digits \n");
+return false;
+}
+if(pay.card_no.value.length<16)
+{
+alert("invalid Card no \n");
+return false;
+}
+if(pay.card_no.value.length>16)
+{
+alert("please check the number contains 16 digits\n");
+return false;
+}
+if(pay.sec_no.value=="")
+{
+alert("please enter the security no. \n");
+return false;
+}
+if(isNaN(Inum2))
+{
+alert("please enter only numeral digits \n");
+return false;
+}
+if(pay.sec_no.value.length<3)
+{
+alert("invalid security no \n");
+return false;
+}
+if(pay.sec_no.value.length>3)
+{
+alert("please check the number contains 3 digits \n");
+return false;
+}
+}
+</SCRIPT>
+<body bgcolor="#FDD017" align="center">
+<br><br><br>
+<hr>
+<form name="pay" action="confirm.html" onSubmit="return val()">
+<br><br><br>
+
+Enter Type of Card :<input type="radio" name="card_type" Id="visa" checked="true">Visa&nbsp;&nbsp;
+
+<input type="radio" name="card_type" Id="mastercard">Mastercard<br><br><br>
+
+Enter Card no. :<input type="text" name="card_no" size="16"><br><br><br>
+
+Enter Security no:<input type="text" name="sec_no" size="3"><br><br><br>
+
+<input type="submit" name="submit" value="submit">&nbsp;&nbsp;
+<input type="reset" value="cancel"><br><br><br>
+<hr>
+</form>
+</body>

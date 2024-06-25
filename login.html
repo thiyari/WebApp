@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JAVASCRIPT">
+function val()
+{
+if(form1.user.value=="")
+{
+alert("please enter your user name \n");
+return false;
+}
+if(form1.user.value.length<5)
+{
+alert("user name can't be less than 5 characters \n");
+return false;
+}
+if(form1.pass.value=="")
+{
+alert("please enter the password \n");
+return false;
+}
+if(form1.pass.value.length<6)
+{
+alert("password can't be less than 6 digits \n");
+return false;
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY ALIGN="CENTER" BGCOLOR="#FDD017">
+<BR><BR><BR>
+<FORM NAME="form1" ACTION="profile.html" METHOD="POST" >
+USER NAME :<INPUT TYPE="TEXT" NAME="user" SIZE="20"><BR><BR><BR>
+PASSWORD  :<INPUT TYPE="PASSWORD" NAME="pass" SIZE="20"><BR><BR><BR>
+<INPUT TYPE="submit" name="submit" value="submit" onClick="return val()">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="reset" name="cancel" value="cancel"><br>
+</body>
+</html>
